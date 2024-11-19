@@ -36,10 +36,11 @@ Modern image compression standards like VVC introduce complex artifacts (blockin
 ## Installation
 
 ### Clone the Repository
-\`\`\`bash
-git clone https://github.com/cszn/KAIR.git
-cd KAIR
-\`\`\`
+Run the following commands:
+<br><br>
+git clone https://github.com/cszn/KAIR.git <br>
+%cd KAIR
+
 
 ---
 
@@ -48,48 +49,50 @@ cd KAIR
 We use the **DIV2K Dataset** for training the model. Follow these steps to download and organize the dataset:
 
 ### 1. Create Necessary Directories
-\`\`\`bash
-mkdir -p trainsets/trainH/HR
-mkdir -p trainsets/trainH/LR_bicubic/X2/
-mkdir -p trainsets/trainH/LR_bicubic/X3/
-mkdir -p trainsets/trainH/LR_bicubic/X4/
-\`\`\`
+Run the following commands:
+<br><br>
+!mkdir -p trainsets/trainH/HR <br>
+!mkdir -p trainsets/trainH/LR_bicubic/X2/ <br>
+!mkdir -p trainsets/trainH/LR_bicubic/X3/ <br>
+!mkdir -p trainsets/trainH/LR_bicubic/X4/ <br>
+
 
 ### 2. Download DIV2K Training Set
 Run the following commands:
-\`\`\`bash
-wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip
-wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_bicubic_X2.zip
-wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_bicubic_X3.zip
-wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_bicubic_X4.zip
-\`\`\`
+<br><br>
+!wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_HR.zip <br>
+!wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_bicubic_X2.zip <br>
+!wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_bicubic_X3.zip <br>
+!wget https://data.vision.ee.ethz.ch/cvl/DIV2K/DIV2K_train_LR_bicubic_X4.zip <br>
+
 
 ### 3. Extract and Organize the Data
-\`\`\`bash
-unzip DIV2K_train_HR.zip -d trainsets/trainH/HR/
-unzip DIV2K_train_LR_bicubic_X2.zip -d trainsets/trainH/LR_bicubic/X2/
-unzip DIV2K_train_LR_bicubic_X3.zip -d trainsets/trainH/LR_bicubic/X3/
-unzip DIV2K_train_LR_bicubic_X4.zip -d trainsets/trainH/LR_bicubic/X4/
-\`\`\`
+Run the following commands:
+<br><br>
+!unzip DIV2K_train_HR.zip -d trainsets/trainH/HR/ <br>
+!unzip DIV2K_train_LR_bicubic_X2.zip -d trainsets/trainH/LR_bicubic/X2/ <br>
+!unzip DIV2K_train_LR_bicubic_X3.zip -d trainsets/trainH/LR_bicubic/X3/ <br>
+!unzip DIV2K_train_LR_bicubic_X4.zip -d trainsets/trainH/LR_bicubic/X4/ <br>
+
 
 ---
 
 ## Install Required Packages
 
-Ensure Python and pip are installed. Install the necessary dependencies:
-\`\`\`bash
-pip install -r requirements.txt
-\`\`\`
+Ensure Python and pip are installed. Install the necessary dependencies: <br>
+
+!pip install -r requirements.txt
+
 
 ---
 
 ## Training the Model
 
 ### Run the Training Script
-To start training the model for super-resolution, use the following command:
-\`\`\`bash
-python main_train_psnr.py --opt options/swinir/train_swinir_sr_classical.json
-\`\`\`
+To start training the model for super-resolution, use the following command: <br>
+
+!python main_train_psnr.py --opt options/swinir/train_swinir_sr_classical.json
+
 
 ### Training Details:
 - **Architecture**: SwinIR-based with dynamic enhancements.
