@@ -16,7 +16,7 @@ This repository contains the implementation of our model for **Dynamic Window Sw
 
 ## Introduction
 
-Modern image compression standards like VVC introduce complex artifacts (blocking, blurring, ringing). Our method leverages dynamic window partitioning, mixed attention mechanisms, and locally enhanced networks to restore high-quality images.
+Modern image compression standards like VVC introduce complex artifacts. Our method leverages dynamic window partitioning, mixed attention mechanisms, and locally enhanced networks to restore high-quality images.
 
 ### Key Highlights:
 - Utilizes **SwinIR-based architecture** with improvements like content-adaptive dynamic windows.
@@ -38,7 +38,7 @@ Modern image compression standards like VVC introduce complex artifacts (blockin
 ### Clone the Repository
 Run the following commands:
 <br><br>
-git clone https://github.com/cszn/KAIR.git <br>
+!git clone https://github.com/cszn/KAIR.git <br>
 %cd KAIR
 
 
